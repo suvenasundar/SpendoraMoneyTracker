@@ -1,0 +1,33 @@
+<ng-container *ngIf="transactions$ | async as transactions">
+  <div class="cards">
+    <div
+      class="card-item"
+      *ngFor="let cardItem of cardItems"
+      [ngClass]="'card-' + cardItem"
+      [class.negative]="
+        cardItem === 'balance' && (transactions | totalByType: 'balance') < 0
+      "
+    >
+      <div class="label">{{ cardItem | titlecase }}</div>
+      <div class="value" [appTypeColor]="cardItem">
+        {{
+          transactions
+            | totalByType: cardItem
+            | currency: "INR" : "symbol" : "1.0-0"
+        }}
+      </div>
+    </div>
+  </div>
+  <div class="savings-rate">
+    <div class="savings-rate-text">
+      <span>Savings rate</span>
+      <strong>{{ calculateSavingsRate(transactions) | percent: "1.1-1" }}</strong>
+    </div>
+    <div class="bar">
+      <div
+        class="bar-fill"
+        [style.width.%]="calculateSavingsRate(transactions) * 100"
+      ></div>
+    </div>
+  </div>
+</ng-container>

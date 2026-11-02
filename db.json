@@ -1,0 +1,100 @@
+{
+  "transactions": [
+    {
+      "id": 2,
+      "title": "Website project",
+      "amount": 12000,
+      "type": "income",
+      "category": "Freelance",
+      "date": "2026-10-12"
+    },
+    {
+      "id": 3,
+      "title": "FD interest",
+      "amount": 1500,
+      "type": "income",
+      "category": "Interest",
+      "date": "2026-10-15"
+    },
+    {
+      "id": 4,
+      "title": "House rent",
+      "amount": 12000,
+      "type": "expense",
+      "category": "Bills",
+      "date": "2026-10-02"
+    },
+    {
+      "id": 5,
+      "title": "Monthly groceries",
+      "amount": 4200,
+      "type": "expense",
+      "category": "Food",
+      "date": "2026-10-03"
+    },
+    {
+      "id": 6,
+      "title": "Electricity bill",
+      "amount": 1350,
+      "type": "expense",
+      "category": "Bills",
+      "date": "2026-10-05"
+    },
+    {
+      "id": 7,
+      "title": "Bus pass",
+      "amount": 800,
+      "type": "expense",
+      "category": "Travel",
+      "date": "2026-10-06"
+    },
+    {
+      "id": 8,
+      "title": "Dinner with friends",
+      "amount": 1100,
+      "type": "expense",
+      "category": "Food",
+      "date": "2026-10-11"
+    },
+    {
+      "id": 9,
+      "title": "Headphones",
+      "amount": 2499,
+      "type": "expense",
+      "category": "Shopping",
+      "date": "2026-10-14"
+    },
+    {
+      "id": 10,
+      "title": "Mobile recharge",
+      "amount": 299,
+      "type": "expense",
+      "category": "Bills",
+      "date": "2026-10-18"
+    },
+    {
+      "id": 11,
+      "title": "Emergency fund",
+      "amount": 10000,
+      "type": "saving",
+      "category": "Emergency Fund",
+      "date": "2026-10-02"
+    },
+    {
+      "id": 12,
+      "title": "Index fund SIP",
+      "amount": 5000,
+      "type": "saving",
+      "category": "Mutual Fund",
+      "date": "2026-10-05"
+    },
+    {
+      "id": 13,
+      "title": "Recurring deposit",
+      "amount": 3000,
+      "type": "saving",
+      "category": "RD",
+      "date": "2026-10-10"
+    }
+  ]
+}

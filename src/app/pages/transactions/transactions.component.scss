@@ -1,0 +1,101 @@
+.add-btn{
+    height: 36px;
+    padding: 0 16px;
+    background: var(--brand);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.add-btn .add-icon{
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+
+.add-btn:hover{
+    opacity: 0.9;
+}
+
+
+
+.filters-and-search{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filters-and-search .search{
+    height: 36px;
+    width: 200px;
+    padding: 0 12px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--card);  
+    font:inherit;
+    font-size: 14px;
+}
+
+.filters-and-search .search:focus{
+    outline: none;
+    border-color: var(--brand);
+    box-shadow: 0 0 0 3px var(--brand-soft);
+}
+
+
+.transactions{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.transactions-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.transactions-header h2{
+    font-size: 18px;
+    font-weight: 500;
+    margin-right: auto;
+}
+
+.status{
+    padding: 16px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.status.error{
+    background: var(--danger-soft);
+    color: var(--expense);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.status.error button{
+    background: var(--expense);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 12px;
+    cursor: pointer;
+    font: inherit;
+}
+

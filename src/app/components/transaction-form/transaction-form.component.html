@@ -1,0 +1,99 @@
+<form class="form" #form="ngForm" (ngSubmit)="onSubmit()">
+  <label
+    >Title
+    <input
+      type="text"
+      name="title"
+      placeholder="What was it ?"
+      [(ngModel)]="newTransaction.title"
+      required
+      maxlength="40"
+      #titleInput="ngModel"
+    />
+    <small
+      class="error"
+      *ngIf="titleInput.touched && titleInput.hasError('required')"
+      >Enter a title</small
+    >
+    <small
+      class="error"
+      *ngIf="titleInput.touched && titleInput.hasError('maxlength')"
+      >Keep it under 40 characters</small
+    >
+  </label>
+
+  <label
+    >Amount
+    <input
+      type="number"
+      name="amount"
+      placeholder="Enter the Amount"
+      [(ngModel)]="newTransaction.amount"
+      required
+      min="1"
+      #amountInput="ngModel"
+    />
+    <small
+      class="error"
+      *ngIf="amountInput.touched && amountInput.hasError('required')"
+      >Enter an amount</small
+    >
+    <small
+      class="error"
+      *ngIf="amountInput.touched && amountInput.hasError('min')"
+      >Amount must be at least ₹1</small
+    >
+  </label>
+  <label
+    >Type
+    <select
+      name="type"
+      [(ngModel)]="newTransaction.type"
+      (change)="newTransaction.category = ''"
+    >
+      <option value="income">Income</option>
+      <option value="expense">Expense</option>
+      <option value="saving">Saving</option>
+    </select>
+  </label>
+  <label
+    >Category
+    <select
+      name="category"
+      [(ngModel)]="newTransaction.category"
+      required
+      #categoryInput="ngModel"
+    >
+      <option value="">Choose category</option>
+      <option [value]="c" *ngFor="let c of categories[newTransaction.type]">
+        {{ c }}
+      </option>
+    </select>
+    <small class="error" *ngIf="categoryInput.touched && categoryInput.invalid"
+      >Choose a category</small
+    >
+  </label>
+
+  <label
+    >Date
+    <input
+      name="date"
+      type="date"
+      [(ngModel)]="newTransaction.date"
+      required
+      #dateInput="ngModel"
+    />
+    <small class="error" *ngIf="dateInput.touched && dateInput.invalid"
+      >Pick a date</small
+    >
+  </label>
+
+  <div class="actions">
+    <button class="btn-cancel" type="button" (click)="cancel.emit()">
+      Cancel
+    </button>
+    <button class="btn-submit" type="submit" [disabled]="form.invalid">
+      Add
+    </button>
+  </div>
+</form>

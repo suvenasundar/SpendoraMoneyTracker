@@ -1,0 +1,3 @@
+<div class="filters">
+    <button [class.active]="filter===selected" type="button" *ngFor="let filter of filters" (click)="selectedChange.emit(filter)">{{filter | titlecase}}</button>
+</div>

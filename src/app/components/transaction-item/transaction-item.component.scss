@@ -1,0 +1,102 @@
+.item-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--card);
+    border-left: 4px solid transparent;
+    gap: 16px;
+    padding: 14px 16px 14px 20px;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+}
+
+.name{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.meta{
+    font-size: 13px;
+    color: var(--muted);
+}
+.amount{
+    font-size: 15px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+.price{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.card-income{
+    border-left: 4px solid var(--income);
+   
+}
+.card-expense{
+  border-left: 4px solid var(--expense);
+}
+.card-saving{
+    border-left: 4px solid var(--saving);
+}
+
+.delete{
+    width: 34px;
+    height: 34px;
+    border: none;
+    background: transparent;
+    color: var(--muted);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.delete:hover{
+    background: var(--danger-soft);
+    color: var(--expense);
+}
+
+.left{
+    display: flex; 
+    align-items: center; 
+    gap: 12px; 
+    min-width: 0;
+}
+
+.icon{
+    width: 36px; 
+    height: 36px; 
+    border-radius: 50%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    flex-shrink: 0;
+}
+
+.icon mat-icon{
+    font-size: 20px; 
+    width: 20px; 
+    height: 20px;
+}
+
+.card-income .icon{
+    background: var(--income-soft); 
+    color: var(--income);
+}
+
+.card-expense .icon{
+    background: var(--expense-soft); 
+    color: var(--expense);
+}
+
+.card-saving .icon{
+    background-color: var(--saving-soft);
+    color: var(--saving);
+}

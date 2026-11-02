@@ -1,0 +1,49 @@
+.top-bar{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.nav{
+    display: inline-flex;
+    gap: 4px;
+    padding: 4px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background-color: var(--card);
+}
+
+.nav a{
+    padding: 8px 16px;
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 10px;
+}
+
+.nav a:hover{
+    color: var(--text);
+}
+
+.nav a.active{
+    background: var(--brand);
+    color: #fff;
+}
+
+
+.title{
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--brand);
+    text-transform: capitalize;
+}
+
+.subtitle{
+ font-size: 14px;
+ color: var(--muted);
+ margin-top: 4px;
+}

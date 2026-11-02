@@ -1,0 +1,45 @@
+<ng-container *ngIf="transactions$ | async as transactions">
+  <section class="transactions">
+    <div class="transactions-header">
+      <h2>Transactions</h2>
+
+      <div class="filters-and-search">
+        <input
+          class="search"
+          type="search"
+          placeholder="search ....."
+          [(ngModel)]="searchText"
+        />
+        <app-type-filter
+          [selected]="selectedType"
+          (selectedChange)="selectedType = $event"
+        ></app-type-filter>
+        <button class="add-btn" *ngIf="!showForm" (click)="showForm = true">
+          <mat-icon class="add-icon">add</mat-icon>
+          <span>Add transaction</span>
+        </button>
+      </div>
+    </div>
+    <p class="status" *ngIf="transactionService.loading">
+      Loading transactions…
+    </p>
+
+    <div class="status error" *ngIf="transactionService.error">
+      {{ transactionService.error }}
+      <button type="button" (click)="transactionService.loadAll()">
+        Retry
+      </button>
+    </div>
+    <app-transaction-form
+      *ngIf="showForm"
+      (save)="addTransaction($event)"
+      (cancel)="showForm = false"
+    ></app-transaction-form>
+    <app-transaction-list
+      [transactions]="
+        transactions | filterByType: selectedType | search: searchText
+      "
+      (transactionDeleted)="deleteTransaction($event)"
+    ></app-transaction-list>
+  </section>
+</ng-container>

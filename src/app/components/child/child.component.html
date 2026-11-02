@@ -1,0 +1,18 @@
+<form [formGroup]="userForm" (ngSubmit)="submitForm()">
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" placeholder="Enter your name:" formControlName="name">
+    </div>
+    <div>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" placeholder="Enter your email:" formControlName="email">
+    </div>
+    <div formGroupName="address">
+        <label for="city">city</label>
+        <input type="city" name="city" id="city" placeholder="Enter your city" formControlName="city">
+        <label for="street">Street</label>
+        <input type="street" name="street" id="street" placeholder="Enter your street" formControlName="street">
+    </div>
+    <button type="submit" [disabled]="!userForm.valid">Submit</button>
+
+</form>

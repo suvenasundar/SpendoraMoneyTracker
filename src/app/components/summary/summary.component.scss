@@ -1,0 +1,71 @@
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 14px;
+}
+
+.card-item{
+    padding:18px 20px;
+    border:1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--card);
+
+}
+.label{
+    font-size: 13px;
+    color: var(--muted);
+}
+.value{
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 8px;
+}
+
+
+.card-balance{
+    background: var(--brand-soft);
+    border-color: transparent;
+}
+
+.card-balance.negative{
+    background:var(--danger-soft);
+    .value{
+        color: var(--expense);
+    }
+}
+
+
+.savings-rate{
+    margin-top: 14px;
+    padding: 14px 20px;
+    border:1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--card); 
+}
+
+.savings-rate-text{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 10px;
+}
+
+.savings-rate-text strong{
+    color: var(--saving);
+}
+
+
+.bar{
+   height: 8px;
+   background: var(--bg);
+   border-radius: 999px;
+   overflow: hidden;
+}
+
+.bar-fill{
+    height: 100%;
+    max-width: 100%;
+    background: var(--saving);
+    border-radius: 999px;
+}

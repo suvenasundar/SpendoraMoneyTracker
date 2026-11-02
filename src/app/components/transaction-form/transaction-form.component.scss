@@ -1,0 +1,84 @@
+input.ng-invalid.ng-touched,
+select.ng-invalid.ng-touched {
+  border-color: var(--expense);
+}
+.error {
+  font-size: 12px;
+  color: var(--expense);
+}
+
+:host{
+    display: block;
+}
+
+.form{
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+label{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 13px;
+    color: var(--muted);
+}
+
+input, select{
+    height: 40px;
+    padding: 0 12px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font:inherit;
+    font-size: 14px;
+    color: var(--text);
+    background: var(--card);
+}
+
+input:focus , select:focus{
+    outline: none;
+    border-color: var(--brand);
+    box-shadow: 0 0 0 3px var(--brand-soft);
+}
+
+.actions{
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    grid-column: 1 / -1;
+}
+
+.btn-submit{
+    height: 40px;
+    padding: 0 16px;
+    background: var(--brand);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn-cancel{
+    height: 40px;
+    padding: 0 16px;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: var(--text);
+    cursor: pointer;
+}
+
+.btn-submit:disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.btn-cancel:hover{
+    background: var(--bg);
+}

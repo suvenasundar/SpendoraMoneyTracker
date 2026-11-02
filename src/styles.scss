@@ -1,1 +1,33 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+  --bg: #f5f6fa;          // page background
+  --card: #ffffff;        // cards, list, filter
+  --border: #e6e8ee;      // card borders, row dividers
+  --text: #1c2333;        // titles, values
+  --muted: #6b7385;       // labels, category/date, inactive tabs
+  --brand: #4f46e5;       // app title, active tab
+  --brand-soft: #eef0ff;  // balance card background
+  --income: #15924a;      // green
+  --expense: #d9363e;     // red
+  --saving: #2563eb;      // blue
+  --danger-soft: #fdecec; // negative balance bg, delete hover
+  --radius: 14px;         // card corner radius
+  --income-soft: #e7f5ec;
+  --expense-soft: #fdecec;
+  --saving-soft: #e8efff;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+button {
+  font: inherit;
+}

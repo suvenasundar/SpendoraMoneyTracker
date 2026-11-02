@@ -1,0 +1,28 @@
+<div class="item-card" [ngClass]="'card-' + transaction.type">
+  <div class="left" [routerLink]="['/transactions', transaction.id]">
+    <div class="icon" [ngSwitch]="transaction.type" [appTypeColor]="transaction.type">
+      <mat-icon *ngSwitchCase="'income'">trending_up</mat-icon>
+      <mat-icon *ngSwitchCase="'expense'">shopping_cart</mat-icon>
+      <mat-icon *ngSwitchCase="'saving'">savings</mat-icon>
+    </div>
+    <div class="title">
+      <p class="name">{{ transaction.title }}</p>
+      <p class="meta">
+        {{ transaction.category }} · {{ transaction.date | date: "d MMM y" }}
+      </p>
+    </div>
+  </div>
+  <div class="price">
+    <p class="amount" [appTypeColor]="transaction.type">
+      {{ transaction | signedAmount }}
+    </p>
+    <button
+      class="delete"
+      type="button"
+      aria-label="Delete"
+      (click)="deleteTransaction.emit(transaction)"
+    >
+      <mat-icon>delete_outline</mat-icon>
+    </button>
+  </div>
+</div>

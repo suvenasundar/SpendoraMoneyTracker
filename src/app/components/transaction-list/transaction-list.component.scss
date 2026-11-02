@@ -1,0 +1,21 @@
+.list{
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.empty{
+    padding: 40px 16px;
+    text-align: center;
+    font-size: 14px;
+    color: var(--muted);
+}
+
+app-transaction-item {
+  display: block;
+}
+
+app-transaction-item:not(:last-of-type) {
+  border-bottom: 1px solid var(--border);
+}

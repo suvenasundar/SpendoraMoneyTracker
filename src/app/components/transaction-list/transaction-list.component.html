@@ -1,0 +1,9 @@
+<div class="list">
+  <app-transaction-item
+    *ngFor="let trans of transactions"
+    [transaction]="trans"
+    (deleteTransaction)="transactionDeleted.emit($event)"
+  >
+  </app-transaction-item>
+  <p class="empty" *ngIf="transactions.length === 0">No transactions</p>
+</div>
